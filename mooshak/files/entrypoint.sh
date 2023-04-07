@@ -1,3 +1,9 @@
 #!/bin/sh
-ssh-keygen -A
-exec /usr/sbin/sshd -D -e "$@"
+
+./run-udpgw.sh  &
+process_id=$!
+./ssh.sh  &
+wait $process_id
+wait $!
+
+exit $?
