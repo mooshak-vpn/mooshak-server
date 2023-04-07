@@ -1,7 +1,6 @@
 FROM ubuntu:22.04
 
-RUN apt update && apt install openssh-server python3 wget build-essential g++ make -y
-RUN apt install cmake -y
+RUN apt update && apt install openssh-server python3 wget cmake build-essential -y
 
 RUN ln /usr/bin/python3 /usr/bin/python
 RUN mkdir -p /opt/mooshak
