@@ -107,6 +107,6 @@ location /mooshak {
 Reload your Nginx service and you are good to go.
 
 
-## Changing ports
+## Changing ports and max clients
 
-To change ports, take a look at `docker-compose.yaml` file.
+To change ports, take a look at `docker-compose.yaml` file. The environment variable `UDPG_MAX_CLIENTS` (default to `20`) sets how many users can use `udpgw` at same time. Rest of them won't be able to use udp tunneling.
